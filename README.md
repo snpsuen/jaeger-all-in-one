@@ -6,7 +6,7 @@ The Jaeger all-in-one yaml template is adapted from https://raw.githubuserconten
         matchLabels: <br>
           app: jaeger <br>
         
-It has been tested to work wuth istio in a Katacoda Kubernetes playground.
+It has been tested to work with istio in a Katacoda Kubernetes playground.
 
 Run these commands on the master node to install Jaeger and change the jaeger-query service type to NodePort. <br>
 $ kubectl create -n istio-system -f https://raw.githubusercontent.com/snpsuen/jaeger-all-in-one/master/jaeger-all-in-one-template.yaml <br>
