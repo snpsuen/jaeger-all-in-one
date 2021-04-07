@@ -1,10 +1,9 @@
 # jaeger-all-in-one
 
-Breaking News (7 April 2021): <br>
-The latest jaegertracing/all-in-one docker image as of 7 April 2021 does not work properly with Istio 1.9.2. It ignores any built-in or user-defined micro services of the Istio service mesh, except jaeger-query. 
+Breaking news (7 April 2021): <br>
+The latest jaegertracing/all-in-one docker image does not work properly with Istio 1.9.2. It ignores any built-in or user-defined micro services of the Istio service mesh, except jaeger-query. <br>
 A quick fix is to fall back to an older jaegertracing image like jaegertracing/all-in-one:1.20.0 by using the patched template manifest: <br>
 $ kubectl create -n istio-system -f https://raw.githubusercontent.com/snpsuen/jaeger-all-in-one/master/jaeger-all-in-one-template_1200.yaml <br>
-<br>
 <p>
 --- <br>
 The Jaeger all-in-one yaml template is adapted from https://raw.githubusercontent.com/jaegertracing/jaeger-kubernetes/master/all-in-one/jaeger-all-in-one-template.yml, by modifying the deployment manifest:
