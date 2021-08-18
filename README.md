@@ -6,8 +6,8 @@ A quick fix is to fall back to an older jaegertracing image like jaegertracing/a
 $ kubectl create -n istio-system -f https://raw.githubusercontent.com/snpsuen/jaeger-all-in-one/master/jaeger-all-in-one-template_1200.yaml <br>
 <p>
 --- <br>
-The Jaeger all-in-one yaml template is adapted from https://raw.githubusercontent.com/jaegertracing/jaeger-kubernetes/master/all-in-one/jaeger-all-in-one-template.yml, by modifying the deployment manifest:
-1.  apiVersion: apps/v1
+The Jaeger all-in-one yaml template is adapted from https://raw.githubusercontent.com/jaegertracing/jaeger-kubernetes/master/all-in-one/jaeger-all-in-one-template.yml, by modifying the deployment manifest: <br>
+1.  apiVersion: apps/v1 <br>
 2.  spec: <br>
       selector: <br>
         matchLabels: <br>
